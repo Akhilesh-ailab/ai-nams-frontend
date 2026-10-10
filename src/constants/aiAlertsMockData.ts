@@ -1,0 +1,14 @@
+import type { AiAlertRecord } from "@/types/aiAlert";
+
+const minutesAgo = (minutes: number) => new Date(Date.now() - minutes * 60000).toISOString();
+
+export const INITIAL_AI_ALERTS: AiAlertRecord[] = [
+  { id: "AIA-9001", generatedAt: minutesAgo(12), alertType: "High Dose", drugName: "Fentanyl Citrate", department: "ICU Ward", riskScore: 0.91, reason: "Dose is 3.2 times the prescriber's usual dose for this drug.", status: "Pending Review" },
+  { id: "AIA-9002", generatedAt: minutesAgo(45), alertType: "Rapid Stock Depletion", drugName: "Fentanyl Citrate", department: "ICU Ward", riskScore: 0.84, reason: "Department stock fell by 60% in the last 48 hours (85 units left).", status: "Pending Review" },
+  { id: "AIA-9003", generatedAt: minutesAgo(180), alertType: "Prescriber Outlier", drugName: "Oxycodone HCl", department: "Operation Theatre (OT)", riskScore: 0.77, reason: "Dr. S. Mehta prescribed 72% more per prescription than the department average.", status: "Pending Review" },
+  { id: "AIA-9004", generatedAt: minutesAgo(300), alertType: "Night-Time Pattern", drugName: "Hydromorphone", department: "Emergency Ward", riskScore: 0.58, reason: "5 dispensing entries between 01:00 and 04:00, more than the usual night pattern.", status: "Pending Review" },
+  { id: "AIA-9005", generatedAt: minutesAgo(420), alertType: "Excessive Department Utilization", drugName: "Morphine Sulfate", department: "ICU Ward", riskScore: 0.69, reason: "This month's use is 36% above the department's 6-month average.", status: "Pending Review" },
+  { id: "AIA-9006", generatedAt: minutesAgo(1500), alertType: "Forecast Deviation", drugName: "Lorazepam", department: "Emergency Ward", riskScore: 0.42, reason: "Actual consumption is 38% higher than the AI forecast for this month.", status: "Reviewed", validation: "False Positive", actionTaken: "No Action", reviewedBy: "Dr. P. Iyer", reviewedAt: minutesAgo(1455) },
+  { id: "AIA-9007", generatedAt: minutesAgo(2900), alertType: "High Dose", drugName: "Morphine Sulfate", department: "Oncology Ward", riskScore: 0.88, reason: "Dose is 2.6 times the prescriber's usual dose for this drug.", status: "Reviewed", validation: "True Positive", actionTaken: "Clinical Review", reviewedBy: "Dr. P. Iyer", reviewedAt: minutesAgo(2850) },
+  { id: "AIA-9008", generatedAt: minutesAgo(4300), alertType: "Rapid Stock Depletion", drugName: "Hydromorphone", department: "Operation Theatre (OT)", riskScore: 0.73, reason: "Department stock fell by 45% in the last 48 hours.", status: "Reviewed", validation: "True Positive", actionTaken: "Internal Audit", reviewedBy: "Dr. P. Iyer", reviewedAt: minutesAgo(4240) },
+];

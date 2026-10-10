@@ -1,0 +1,38 @@
+import type { BulkReceiptRecord } from "@/types/procurement";
+
+export const INITIAL_RECEIPTS: BulkReceiptRecord[] = [
+  {
+    id: "RCPT-2001",
+    dateOfReceipt: "2026-09-10",
+    drugName: "Morphine Sulfate",
+    formulation: "Inj",
+    strength: "10mg/ml",
+    batchNumber: "BATCH-9942",
+    supplierName: "MedPharma Ltd",
+    invoiceNumber: "INV-2026-0451",
+    invoiceDate: "2026-09-08",
+    expiryDate: "2028-03-31",
+    openingStock: 120,
+    quantityReceived: 330,
+    totalAvailableStock: 450,
+    verifiedBy: "Pharmacist R. Nair",
+    storageConfirmed: true,
+  },
+  {
+    id: "RCPT-2002",
+    dateOfReceipt: "2026-09-15",
+    drugName: "Fentanyl Citrate",
+    formulation: "Inj",
+    strength: "100mcg/2ml",
+    batchNumber: "BATCH-7710",
+    supplierName: "Cadila Pharma",
+    invoiceNumber: "INV-2026-0468",
+    invoiceDate: "2026-09-13",
+    expiryDate: "2027-11-30",
+    openingStock: 40,
+    quantityReceived: 45,
+    totalAvailableStock: 85,
+    verifiedBy: "Pharmacist R. Nair",
+    storageConfirmed: true,
+  },
+];

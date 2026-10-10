@@ -1,0 +1,35 @@
+import type { DepartmentIssueRecord } from "@/types/departmentIssue";
+
+export const INITIAL_ISSUES: DepartmentIssueRecord[] = [
+  {
+    id: "ISS-3001",
+    dateOfIssue: "2026-09-18",
+    departmentName: "ICU Ward",
+    indentingOfficer: "Dr. A. Sharma",
+    indentReferenceNumber: "IND-2026-114",
+    drugName: "Fentanyl Citrate",
+    batchNumber: "BATCH-7710",
+    quantityIssued: 15,
+    stockBeforeIssue: 100,
+    stockAfterIssue: 85,
+    departmentReceivingSignatory: "Nurse Anita M.",
+    issuingPharmacist: "Pharmacist R. Nair",
+    discrepancyNoted: false,
+  },
+  {
+    id: "ISS-3002",
+    dateOfIssue: "2026-09-20",
+    departmentName: "Operation Theatre (OT)",
+    indentingOfficer: "Dr. S. Mehta",
+    indentReferenceNumber: "IND-2026-119",
+    drugName: "Hydromorphone",
+    batchNumber: "BATCH-5521",
+    quantityIssued: 10,
+    stockBeforeIssue: 150,
+    stockAfterIssue: 140,
+    departmentReceivingSignatory: "Nurse Karen P.",
+    issuingPharmacist: "Pharmacist R. Nair",
+    discrepancyNoted: true,
+    discrepancyAmount: 2,
+  },
+];

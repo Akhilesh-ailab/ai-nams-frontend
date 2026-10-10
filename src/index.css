@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  --radius: 0.9rem;
+
+  --background: #F8FAFC;
+  --foreground: #1A1D29;
+
+  --card: #FFFFFF;
+  --card-foreground: #1A1D29;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1D29;
+
+  --primary: #0891B2;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #ECFEFF;
+  --secondary-foreground: #0891B2;
+
+  --muted: #F1F5F9;
+  --muted-foreground: #6B7280;
+
+  --accent: #ECFEFF;
+  --accent-foreground: #0891B2;
+
+  --destructive: #F04438;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #0891B2;
+
+  --success: #12B76A;
+  --success-foreground: #FFFFFF;
+  --warning: #F79009;
+  --warning-foreground: #FFFFFF;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+}
+
+/* Slow drift used by FloatingBackground's decorative icons */
+@keyframes float-a { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(18px, -26px) rotate(8deg); } }
+@keyframes float-b { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(-22px, 22px) rotate(-7deg); } }
+@keyframes float-c { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(14px, 20px) rotate(5deg); } }
