@@ -5,9 +5,9 @@ import {
   Users, FileText, Syringe, AlertTriangle, TrendingUp,
   BarChart3, ShieldCheck, FileBarChart, Lock, X,
 } from "lucide-react";
+import Logo from "@/components/common/Logo";
 import { cn } from "@/lib/utils";
 import { ROUTES } from "@/constants/routes";
-import { APP_NAME, APP_TAGLINE } from "@/constants/app";
 import { ALERT_ROLES, CLINICAL_ROLES, COMPLIANCE_ROLES, FORECAST_ROLES, PHARMACY_ROLES } from "@/constants/permissions";
 import type { RootState } from "@/redux/store";
 import type { MenuGroup } from "@/types/navigation";
@@ -77,15 +77,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
       >
         <div>
           <div className="flex items-center justify-between gap-3 px-5 py-5">
-            <div className="flex items-center gap-3">
-              <div className="rounded-xl bg-gradient-to-br from-cyan-600 to-teal-800 p-2 text-white shadow-md shadow-cyan-600/20">
-                <ShieldCheck size={22} />
-              </div>
-              <div>
-                <h1 className="text-base font-black leading-none tracking-tight">{APP_NAME}</h1>
-                <p className="mt-1 text-[10px] font-medium leading-tight text-muted-foreground">{APP_TAGLINE}</p>
-              </div>
-            </div>
+            <Logo size="md" showTagline />
             <button onClick={onClose} className="text-muted-foreground hover:text-foreground lg:hidden">
               <X className="h-5 w-5" />
             </button>
